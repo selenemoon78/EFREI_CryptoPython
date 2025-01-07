@@ -11,6 +11,18 @@ app = Flask(__name__)
 def hello_world():
     return render_template('hello.html')
 
+@app.route('/')
+def exercice_1():
+    return render_template('exercice1.html')
+
+@app.route('/')
+def exercice_2():
+    return render_template('exercice2.html')
+
+@app.route('/')
+def exercice_3():
+    return render_template('exercice3.html')
+
 key = Fernet.generate_key()
 f = Fernet(key)
 
