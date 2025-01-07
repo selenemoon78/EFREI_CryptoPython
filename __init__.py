@@ -11,15 +11,15 @@ app = Flask(__name__)
 def hello_world():
     return render_template('hello.html')
 
-@app.route('/')
+@app.route('/exercice1')
 def exercice_1():
     return render_template('exercice1.html')
 
-@app.route('/')
+@app.route('/exercice2')
 def exercice_2():
     return render_template('exercice2.html')
 
-@app.route('/')
+@app.route('/exercice3')
 def exercice_3():
     return render_template('exercice3.html')
 
