@@ -1,0 +1,12 @@
+from cryptography.fernet import Fernet
+from flask import Flask, rendertemplatestring, rendertemplate, jsonify
+from flask import rendertemplate
+from flask import json
+from urllib.request import urlopen
+import sqlite3 
+
+app = Flask(name)
+
+@app.route('/')
+def exercice_1(): 
+    return render_template('exercice1.html')
