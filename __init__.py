@@ -11,9 +11,9 @@ app = Flask(__name__)
 def hello_world():
     return render_template('hello.html')
 
-@app.route('/vallet')
-def vallet():
-    return render_template('vallet.html')
+@app.route('/jack')
+def jack():
+    return render_template('jack.html')
 
 @app.route('/svg')
 def svg():
