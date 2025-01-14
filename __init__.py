@@ -11,6 +11,11 @@ app = Flask(__name__)
 def hello_world():
     return render_template('hello.html')
 
+@app.route('/svg')
+def svg():
+    return render_template('svg.html')
+
+
 @app.route('/exercice1')
 def exercice_1():
     return render_template('exercice1.html')
