@@ -15,6 +15,10 @@ def hello_world():
 def jack():
     return render_template('jack.html')
 
+@app.route('/chenille')
+def chenille():
+    return render_template('chenille.html')
+
 @app.route('/svg')
 def svg():
     return render_template('svg.html')
