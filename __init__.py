@@ -11,6 +11,11 @@ app = Flask(__name__)
 def hello_world():
     return render_template('hello.html')
 
+@app.route('/jeu_de_des')
+def jeu():
+    return render_template('jeu_de_des')
+
+
 @app.route('/jack')
 def jack():
     return render_template('jack.html')
