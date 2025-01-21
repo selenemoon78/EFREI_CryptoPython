@@ -12,8 +12,8 @@ def hello_world():
     return render_template('hello.html')
 
 @app.route('/jeu_de_des')
-def jeu():
-    return render_template('jeu_de_des')
+def jeu_de_des():
+    return render_template('jeu_de_des.html')
 
 
 @app.route('/jack')
