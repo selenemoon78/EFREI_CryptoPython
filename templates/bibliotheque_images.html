@@ -5,10 +5,10 @@ function affichage(){
 	alert("Tout es OK !");
 }
 function cacher(){
-	document.getElementById('DuTexte').style.display="None";
+	document.getElementById('Control1').style.display="None";
 }
 function presenter(){
-	document.getElementById('DuTexte').style.display="Block";
+	document.getElementById('Control21').style.display="Block";
 }
 
 function controler(){
@@ -26,13 +26,14 @@ function controler(){
 <h2>Boite de dialogue</h2>
 <button onclick="affichage()">Afficher</button>
 
-<p id="DuTexte">Ma phrase de texte</p>
+
+<p>Image1<input type="checkbox" id="Control1"></p>
+<button onclick="controler()">
+<p>Image2<input type="checkbox" id="Control2"></p>
+<button onclick="controler()">
+<p>Image3<input type="checkbox" id="Control3"></p>
+<button onclick="controler()">
 <button onclick="presenter()">Presenter</button>
-<button onclick="cacher()">Cacher</button>
-
-<p>Option<input type="checkbox" id="Control"></p>
-<button onclick="controler()">Check</button>
-
 
 </body>
 </html>
