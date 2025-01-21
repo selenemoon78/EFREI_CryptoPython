@@ -15,6 +15,9 @@ def hello_world():
 def jeu_de_des():
     return render_template('jeu_de_des.html')
 
+@app.route('/bibliotheque_images')
+def bibliotheque_images():
+    return render_template('bibliotheque_images.html')
 
 @app.route('/jack')
 def jack():
