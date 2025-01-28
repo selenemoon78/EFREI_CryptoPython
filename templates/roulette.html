@@ -11,6 +11,8 @@
             const randomNumber = Math.floor(Math.random() * 6) + 1;
             document.getElementById("Br" + randomNumber).style.fill = "red";
             alert("Le barillet tourne. Chambre numéro : " + randomNumber);
+            if(document.getElementById("Br"+Val).style.fill=="red"){alert("Perdu");}
+            else{alert("Gagné");}
         }
         function identifierEtColorerChambre(numero) {
             resetCouleurs();
