@@ -1,41 +1,40 @@
-<html>
+</html>
 <head>
 <script>
- function resetCouleurs() {
-            for (let i = 1; i <= 6; i++) {
-                document.getElementById("Br" + i).style.fill = "gray";
-            }
-        }
-        function lancer() {
-            resetCouleurs();
-            const randomNumber = Math.floor(Math.random() * 6) + 1;
-            document.getElementById("Br" + randomNumber).style.fill = "red";
-            alert("Le barillet tourne. Chambre numéro : " + randomNumber);
-            if(document.getElementById("Br"+Val).style.fill=="red"){alert("Perdu");}
-            else{alert("Gagné");}
-        }
-        function identifierEtColorerChambre(numero) {
-            resetCouleurs();
-            alert("Chambre numéro " + numero);
-            document.getElementById("Br" + numero).style.fill = "red";
-        }
+let loadedChamber = null; // Variable pour stocker le numéro de la chambre chargée
+
+function lancer() {
+    loadedChamber = Math.ceil(Math.random() * 6);
+    alert("Le barillet tourne... Chambre chargée : " + loadedChamber);
+    console.log("Chambre chargée :", loadedChamber);
+    if(document.getElementById("Br" + loadedChamber).style.fill=="red"){alert("Perdu");}
+    else{alert("Gagné");}
+}
+
+function chambre(number){
+          alert("chambre" + number);
+          document.getElementById("Br" + number).style.fill="red";
+}
 
 </script>
+
+
 </head>
 <body>
 <h1>Roulette Russe</h1>
 
 <svg width=200 height=200 style="background-color:antiquewhite">
-    <circle cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="none" />
-    <circle id="Br1" cx="100" cy="40" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherChambre(1)" />
-    <circle id="Br2" cx="150" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherChambre(2)" />
-    <circle id="Br3" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherChambre(3)" />
-    <circle id="Br4" cx="100" cy="160" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherChambre(4)" />
-    <circle id="Br5" cx="50" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherChambre(5)" />
-    <circle id="Br6" cx="50" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherChambre(6)" />
-    <circle cx="100" cy="100" r="10" stroke="black" stroke-width="3" fill="black" />
+<circle cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="none"/>
+<circle id="Br1" cx="100" cy="40" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(1)"/>
+<circle id="Br2" cx="150" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(2)"/>
+<circle id="Br3" cx="50" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(3)"/>
+<circle id="Br4" cx="50" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(4)"/>
+<circle id="Br5" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(5)"/>
+<circle id="Br6" cx="100" cy="160" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(6)"/>
+<circle cx="100" cy="100" r="10" stroke="black" stroke-width="3" fill="black" />
 </svg>
 
 <button onclick="lancer()">Jouer</button>
+
 </body>
 </html>
